@@ -18,14 +18,14 @@ jobs:
  Run-print-hello:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+     # - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - run: python -c "print('Hello GitHub Actions')"
  Run-npm-on-Ubuntu:
     name: Run npm on Ubuntu
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+     # - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
@@ -34,13 +34,15 @@ jobs:
     name: Run PSScriptAnalyzer on Windows
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+     # - uses: actions/checkout@v3
       - name: Install PSScriptAnalyzer module
         shell: pwsh
         run: |
           Set-PSRepository PSGallery -InstallationPolicy Trusted
           Install-Module PSScriptAnalyzer -ErrorAction Stop
 
+
+      - uses: actions/checkout@v3
 
           
           
