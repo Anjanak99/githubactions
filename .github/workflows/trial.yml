@@ -4,12 +4,11 @@ name: Run commands on different operating systems
 
 # Controls when the workflow will run
 on: 
-  label:
-    types: [created, deleted]
+ issues:
+    types: [opened, edited, milestoned]
     push: branches ["main"]
     pull_request: branches ["main"]
-  
-  workflow_dispatch:
+    workflow_dispatch:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
  Run-print-hello:
