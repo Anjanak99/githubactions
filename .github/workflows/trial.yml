@@ -35,8 +35,8 @@ jobs:
      #   with:
       #    node-version: '14'
      # - run: npm help
-  Run-PSScriptAnalyzer-on-Windows:
-    name: Run PowerShellScriptAnalyzer on Windows
+  Run-PSScript-on-Windows:
+    name: Run PowerShellScript on Windows
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
