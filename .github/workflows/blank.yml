@@ -3,12 +3,21 @@
 name: Call a reusable workflow
 
 on:
-  push:
-    branches:
-      - main
+  label:
+    types: [created, deleted]
+#  push:
+#   branches:
+#    - main
 
 jobs:
   call-workflow:
     uses: Anjanak99/githubactions/.github/workflows/actions.yml@main
+    
+    
+    
+    
+    
+    
+    
 
  
