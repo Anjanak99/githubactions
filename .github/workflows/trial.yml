@@ -3,9 +3,10 @@
 name: Run commands on different operating systems
 
 # Controls when the workflow will run
-on:
+on: 
   label:
     types: [created, deleted]
+    push: branches ["main"]
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
