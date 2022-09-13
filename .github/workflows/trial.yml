@@ -1,52 +1,52 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Run commands on different operating systems
-
-# Controls when the workflow will run
-on:  
- push:
-    branches: [ "main" ]
- pull_request:
-    branches: [ "main" ]
- schedule :
-      - cron : '07 * * * *'
+name: example-workflow
+on: [push]
+jobs:
+  production-deploy:
+    if: github.repository == 'Anjanak99/githubactions'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
    
 
  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
- Run-print-hello:
-    runs-on: ubuntu-latest
-    steps:
+#jobs:
+# Run-print-hello:
+#    runs-on: ubuntu-latest
+ #   steps:
      # - uses: actions/checkout@v2
       #- uses: actions/setup-python@v3
    
-      - uses: actions/setup-python@v4 
-        with:
-             python-version: '3.10'
-      - run: python -c "print('Hello GitHub Actions')"
+  #    - uses: actions/setup-python@v4 
+   #     with:
+    #         python-version: '3.10'
+    #  - run: python -c "print('Hello GitHub Actions')"
       
- Run-npm-on-Ubuntu:
-    name: Run npm on Ubuntu
-    runs-on: ubuntu-latest
-    steps:
+ #Run-npm-on-Ubuntu:
+  #  name: Run npm on Ubuntu
+   # runs-on: ubuntu-latest
+   # steps:
      # - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: npm help
- Run-PSScriptAnalyzer-on-Windows:
-    name: Run PSScriptAnalyzer on Windows
-    runs-on: windows-latest
-    steps:
+    #  - uses: actions/setup-node@v3
+     #   with:
+      #    node-version: '14'
+     # - run: npm help
+ #Run-PSScriptAnalyzer-on-Windows:
+  #  name: Run PSScriptAnalyzer on Windows
+   # runs-on: windows-latest
+    #steps:
      # - uses: actions/checkout@v3
-      - name: Install PSScriptAnalyzer module
-        shell: pwsh
-        run: |
-          Set-PSRepository PSGallery -InstallationPolicy Trusted
-          Install-Module PSScriptAnalyzer -ErrorAction Stop
+     # - name: Install PSScriptAnalyzer module
+      #  shell: pwsh
+       # run: |
+        #  Set-PSRepository PSGallery -InstallationPolicy Trusted
+        #  Install-Module PSScriptAnalyzer -ErrorAction Stop
           
-      - uses: actions/checkout@v3
+      #- uses: actions/checkout@v3
 
           
           
