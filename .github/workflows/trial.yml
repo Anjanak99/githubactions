@@ -44,8 +44,7 @@ jobs:
         shell: pwsh
         run: |
 
-         Get-Command cmdlet 
-         Get-Help
+         Get-Content 
          Get-Command
       - uses: actions/checkout@v3
 
