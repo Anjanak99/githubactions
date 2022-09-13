@@ -35,18 +35,19 @@ jobs:
      #   with:
       #    node-version: '14'
      # - run: npm help
- #Run-PSScriptAnalyzer-on-Windows:
-  #  name: Run PSScriptAnalyzer on Windows
-   # runs-on: windows-latest
-    #steps:
-     # - uses: actions/checkout@v3
-     # - name: Install PSScriptAnalyzer module
-      #  shell: pwsh
-       # run: |
-        #  Set-PSRepository PSGallery -InstallationPolicy Trusted
-        #  Install-Module PSScriptAnalyzer -ErrorAction Stop
-          
-      #- uses: actions/checkout@v3
+  Run-PSScriptAnalyzer-on-Windows:
+    name: Run PSScriptAnalyzer on Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install PSScriptAnalyzer module
+        shell: pwsh
+        run: |
+
+         Get-Command cmdlet 
+         Get-Help
+         Get-Command
+      - uses: actions/checkout@v3
 
           
           
