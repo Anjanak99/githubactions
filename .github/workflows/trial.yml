@@ -2,7 +2,7 @@ name: example-workflow
 on: [push]
 jobs:
   production-deploy:
-    if: github.repository == 'Anjanak99/githubactions'
+    if: github.repository == 'Anjanak99/count1'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
