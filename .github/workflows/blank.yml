@@ -3,10 +3,10 @@
 name: Call a reusable workflow #this is caller
 
 on:
-
-  push:
-   branches:
-    - main
+ workflow_dispatch:
+ # push:
+  # branches:
+   # - main
 
 jobs:
   call-workflow:
