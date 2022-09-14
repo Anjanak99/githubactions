@@ -6,9 +6,10 @@ on: # [push]
   #  types: [created,deleted]
   # issues:
   #  types: [opened, edited, milestoned]
-  pull_request:
-    branches: ["main"]
-  workflow_dispatch: 
+ # pull_request:
+# branches: ["main"]
+ # workflow_dispatch: 
+ workflow_call:
 jobs:
   production-deploy:
    # if: github.repository == 'Anjanak99/count1'
