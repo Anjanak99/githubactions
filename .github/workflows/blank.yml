@@ -10,7 +10,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: Anjanak99/githubactions/.github/workflows/actions.yml@main
+    uses: Anjanak99/githubactions/.github/workflows/trial.yml@main
     
     
     
