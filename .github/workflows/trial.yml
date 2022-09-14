@@ -4,8 +4,10 @@ on: # [push]
   #delete
   #label:
   #  types: [created,deleted]
-   issues:
-    types: [opened, edited, milestoned]
+  # issues:
+  #  types: [opened, edited, milestoned]
+  pull_request:
+    branches: ["main"]
 jobs:
   production-deploy:
    # if: github.repository == 'Anjanak99/count1'
