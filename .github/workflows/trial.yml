@@ -3,7 +3,8 @@ on: # [push]
   create
 jobs:
   production-deploy:
-    if: github.repository == 'Anjanak99/count1'
+   # if: github.repository == 'Anjanak99/count1'
+    if: github.repository == 'Anjanak99/githubactions'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
