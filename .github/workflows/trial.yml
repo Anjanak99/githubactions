@@ -1,7 +1,9 @@
 name: example-workflow
 on: # [push]
   #create
-  delete
+  #delete
+  label:
+    types: [created,deleted]
 jobs:
   production-deploy:
    # if: github.repository == 'Anjanak99/count1'
