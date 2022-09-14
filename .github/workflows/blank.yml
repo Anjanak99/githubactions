@@ -8,9 +8,20 @@ on:
    branches:
     - main
 
+#jobs:
+#  call-workflow:
+#    uses: Anjanak99/githubactions/.github/workflows/trial.yml@main
+    
 jobs:
   call-workflow:
-    uses: Anjanak99/githubactions/.github/workflows/trial.yml@main
+    uses: Anjanak99/githubactions/.github/workflows/secret.yml@v1
+
+  call-workflow-passing-data:
+    uses: Anjanak99/githubactions/.github/workflows/secret.yml@main
+    with:
+      username: anjana
+    secrets:
+      token: ${{ secrets.ABCD }}
     
     
     
