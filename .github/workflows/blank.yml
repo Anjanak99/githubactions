@@ -3,11 +3,10 @@
 name: Call a reusable workflow
 
 on:
-  label:
-    types: [created, deleted]
-#  push:
-#   branches:
-#    - main
+
+  push:
+   branches:
+    - main
 
 jobs:
   call-workflow:
