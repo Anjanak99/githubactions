@@ -2,8 +2,10 @@ name: example-workflow
 on: # [push]
   #create
   #delete
-  label:
-    types: [created,deleted]
+  #label:
+  #  types: [created,deleted]
+   issues:
+    types: [opened, edited, milestoned]
 jobs:
   production-deploy:
    # if: github.repository == 'Anjanak99/count1'
