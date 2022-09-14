@@ -1,5 +1,6 @@
 name: example-workflow
-on: [push]
+on: # [push]
+  create
 jobs:
   production-deploy:
     if: github.repository == 'Anjanak99/count1'
