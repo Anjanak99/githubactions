@@ -1,51 +1,59 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Run commands on different operating systems
-
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
- # push:
-  #  branches: [ "main" ]
+name: example-workflow
+on: # [push]
+  #create
+  #delete
+  #label:
+  #  types: [created,deleted]
+  # issues:
+  #  types: [opened, edited, milestoned]
   pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+    branches: ["main"]
+  workflow_dispatch: 
 jobs:
- Run-print-hello:
+  production-deploy:
+   # if: github.repository == 'Anjanak99/count1'
+    if: github.repository == 'Anjanak99/githubactions'
     runs-on: ubuntu-latest
     steps:
-     # - uses: actions/checkout@v2
-      #- uses: actions/setup-python@v3
-   
-      - uses: actions/setup-python@v4 
-        with:
-             python-version: '3.10'
-      - run: python -c "print('Hello GitHub Actions')"
-      
- Run-npm-on-Ubuntu:
-    name: Run npm on Ubuntu
-    runs-on: ubuntu-latest
-    steps:
-     # - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: npm help
- Run-PSScriptAnalyzer-on-Windows:
-    name: Run PSScriptAnalyzer on Windows
+      - run: npm install -g bats
+   
+
+ 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+#jobs:
+# Run-print-hello:
+#    runs-on: ubuntu-latest
+ #   steps:
+     # - uses: actions/checkout@v2
+      #- uses: actions/setup-python@v3
+   
+  #    - uses: actions/setup-python@v4 
+   #     with:
+    #         python-version: '3.10'
+    #  - run: python -c "print('Hello GitHub Actions')"
+      
+ #Run-npm-on-Ubuntu:
+  #  name: Run npm on Ubuntu
+   # runs-on: ubuntu-latest
+   # steps:
+     # - uses: actions/checkout@v3
+    #  - uses: actions/setup-node@v3
+     #   with:
+      #    node-version: '14'
+     # - run: npm help
+  Run-PSScript-on-Windows:
+    name: Run PowerShellScript on Windows
     runs-on: windows-latest
     steps:
-     # - uses: actions/checkout@v3
-      - name: Install PSScriptAnalyzer module
+      - uses: actions/checkout@v3
+      - name: get command
         shell: pwsh
-        run: |
-          Set-PSRepository PSGallery -InstallationPolicy Trusted
-          Install-Module PSScriptAnalyzer -ErrorAction Stop
-          
+        run: 
+         Get-Command
       - uses: actions/checkout@v3
 
           
