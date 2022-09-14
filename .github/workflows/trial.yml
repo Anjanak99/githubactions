@@ -46,15 +46,15 @@ jobs:
      #   with:
       #    node-version: '14'
      # - run: npm help
-  Run-PSScript-on-Windows:
-    name: Run PowerShellScript on Windows
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: get command
-        shell: pwsh
-        run: 
-         Get-Command
+ # Run-PSScript-on-Windows:
+  #  name: Run PowerShellScript on Windows
+   # runs-on: windows-latest
+   # steps:
+    #  - uses: actions/checkout@v3
+     # - name: get command
+      #  shell: pwsh
+       # run: 
+        # Get-Command
       - uses: actions/checkout@v3
 
           
