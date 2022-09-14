@@ -8,6 +8,7 @@ on: # [push]
   #  types: [opened, edited, milestoned]
   pull_request:
     branches: ["main"]
+  workflow_dispatch: 
 jobs:
   production-deploy:
    # if: github.repository == 'Anjanak99/count1'
